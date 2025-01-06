@@ -1,0 +1,76 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TeGi - Login</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <!-- <a href="{% url 'home' %}">TeGi</a> -->
+        </div>
+        <!-- <ul class="nav-links">
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+             <a href="{% url 'post_job' %}">Post a Job</a> -->
+        <!-- </ul>  -->
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <h1>Login</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <!-- <button type="submit">Login</button> -->
+        <button type="submit">submit</button>
+        <!-- <button type="submit">login_as_poster</button> -->
+    </form>
+    
+    <!-- <div>
+        <h3>Or:</h3>
+        <a href="{% url 'login_as_seeker' %}">Login as Job Seeker</a>
+        <a href="{% url 'login_as_poster' %}">Login as Job Poster</a>
+    </div> -->
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>JobPortal</h4>
+                    <p>Your trusted platform to connect job seekers and employers efficiently.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>Email: support@jobportal.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                    <p>Address: 123 JobPortal Street, Tech City</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TeGi. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

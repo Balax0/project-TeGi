@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>TeGi - Profile</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <h1>Your Profile</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Profile</button>
+    </form>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>JobPortal</h4>
+                    <p>Your trusted platform to connect job seekers and employers efficiently.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>Email: support@jobportal.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                    <p>Address: 123 JobPortal Street, Tech City</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TeGi. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
